@@ -1,0 +1,92 @@
+
+/*
+  FOOTER
+*/
+
+.footer {
+  background-color: $bg-footer;
+  margin-top: 60px;
+  border-radius: 10px 10px 0 0;
+  &__content {
+    margin: 0 auto;
+    display: flex;    
+    color: $txt-footer;
+    font-size: rem(14px);
+    font-family: 'Poppins', sans-serif;
+    @include for-phone-only {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 100%;
+      padding-bottom: 30px;
+      height: 280px;        
+    }
+    @include for-tablet-portrait-up {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1000px;
+      height: 200px;
+    }
+    nav {
+      margin-bottom: 15px;
+      @include for-phone-only {
+        margin-bottom: 30px;
+      }
+      a {
+        text-transform: uppercase;
+        font-size: rem(14px);
+        color: $txt-footer;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__logo img {
+    width: 216px;
+    max-width: 216px;
+    height: 70px;
+    margin-right: 15px;
+    position: relative;
+    top: 8px;
+  }
+  &__box--left {
+    display: flex;
+    flex-direction: row;
+  }
+  &__box--right {
+    @include for-phone-only {
+      margin-top: 40px;
+    }
+    p {
+      font-size: rem(14px);
+      font-family: 'Poppins', sans-serif;  
+      text-align: right;
+      @include for-phone-only {
+        text-align: center;
+      }
+    }    
+  }
+  &__redes-sociais {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    img {
+      width: 30px;
+      height: 30px; 
+      margin-right: 8px;  
+    }   
+    p {
+      font-size: rem(14px);
+      margin-top: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-style: italic;
+    }   
+  } 
+}

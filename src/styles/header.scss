@@ -1,0 +1,53 @@
+
+/*
+HEADER
+*/
+.header {  
+  width: 100%;
+  display: block;
+  border-bottom: $link-color;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid $link-color;
+  &__content {
+    height: 6.75em ; /*108px*/
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto; 
+    display: flex ;
+    flex-direction: row;
+    @include for-phone-only {
+      flex-direction: column;
+      padding: 30px 0;
+      height: auto;
+    }
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    width:13.5em; /* 216px*/ 
+    height:4.375em; /* 70px*/
+  }
+  &__menu {
+    display: flex;
+    color: $link-color;
+    @include for-phone-only {
+      margin-top: 20px;
+    }
+    a {
+      text-align: center;
+      font-size:  rem(14px);
+      color: $link-color;
+      font-family: 'Poppins', sans-serif;      
+      height: 1.25em; /* 20px */
+      text-decoration: none;
+      line-height: 1.6;
+      text-transform: uppercase;      
+      margin:0 12px;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
